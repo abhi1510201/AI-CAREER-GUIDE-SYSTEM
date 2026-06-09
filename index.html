@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Career Guidance System</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light-theme">
+    <header>
+      <nav class="container">
+        <a href="#top" class="logo">
+          <span class="ai-text">AI</span>
+          <span data-lang="app-name">CareerGuide</span>
+        </a>
+        <ul>
+          <li><a href="index.html" data-lang="nav-home">Home</a></li>
+          <li>
+            <a href="#assessment" data-lang="nav-assessment">Assessment</a>
+          </li>
+          <li><a href="index.html#about" data-lang="nav-about">About AI</a></li>
+          <li><a href="#team" data-lang="nav-team">Team</a></li>
+          <li>
+            <select id="langSelect" onchange="changeLanguage()">
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+            </select>
+          </li>
+          <li>
+            <button id="themeToggle" onclick="toggleTheme()" class="btn-icon">
+              🌓
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1 data-lang="hero-title">Find Your Future Career Path</h1>
+        <p class="hero-subtext" data-lang="hero-subtitle">
+          Empowering students with AI-driven insights aligned with
+          <strong>SDG 4 - Quality Education</strong>.
+        </p>
+        <a href="assessment.html" class="btn-primary" data-lang="hero-btn"
+          >Start Assessment</a
+        >
+      </section>
+
+      <section id="assessment" class="card">
+        <h2 data-lang="assess-title">Smart Career Assessment</h2>
+        <div class="form-group">
+          <label for="stream" data-lang="label-stream"
+            >Educational Stream</label
+          >
+          <select id="stream">
+            <option value="PCM" data-lang="opt-pcm">
+              PCM (Physics, Chemistry, Math)
+            </option>
+            <option value="PCB" data-lang="opt-pcb">
+              PCB (Physics, Chemistry, Biology)
+            </option>
+            <option value="Commerce" data-lang="opt-comm">Commerce</option>
+            <option value="Arts" data-lang="opt-arts">Arts/Humanities</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="interest" data-lang="label-interest">Core Interest</label>
+          <select id="interest">
+            <option value="Technology" data-lang="opt-tech">
+              Technology & Coding
+            </option>
+            <option value="Healthcare" data-lang="opt-health">
+              Healthcare & Research
+            </option>
+            <option value="Finance" data-lang="opt-fin">
+              Finance & Management
+            </option>
+            <option value="Creative" data-lang="opt-create">
+              Creative Arts & Design
+            </option>
+            <option value="Social" data-lang="opt-social">
+              Social Work & Teaching
+            </option>
+          </select>
+        </div>
+
+        <button class="btn-action" onclick="recommend()" data-lang="assess-btn">
+          Generate My Career Report
+        </button>
+        <div id="result" class="result-container"></div>
+      </section>
+
+      <section id="about" class="card text-center">
+        <h2 data-lang="about-title">About the Technology</h2>
+        <p data-lang="about-desc">
+          Our system utilizes a <strong>Rule-Based AI Engine</strong> to match
+          academic backgrounds with market-leading career trajectories. By
+          removing bias, we contribute to SDG 4 by providing equitable access to
+          career guidance.
+        </p>
+      </section>
+
+      <section id="team" class="card">
+        <h2 data-lang="team-title">Project Team</h2>
+        <div class="team-grid">
+          <div class="member-card">
+            <strong>Abhishek Yadav</strong>
+            <p>Lead Developer</p>
+          </div>
+          <div class="member-card">
+            <strong>Adarsh Kumar</strong>
+            <p>AI Researcher</p>
+          </div>
+          <div class="member-card">
+            <strong>Tushar Bishwas</strong>
+            <p>UI/UX Designer</p>
+          </div>
+          <div class="member-card">
+            <strong>Laksh Kedia</strong>
+            <p>SDG Analyst</p>
+          </div>
+        </div>
+        <div class="school-info">
+          <p data-lang="school-batch">Class XII-I | Batch 2026-27</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-text">
+          <img
+            src="https://www.oxfordpublicschool.net.in/assets/img/oxford-ranchi-logo.png"
+            alt="OPS Logo"
+            class="footer-logo"
+          />
+          <p data-lang="footer-copy">
+            &copy; 2026 Capstone Project - SDG 4 Quality Education
+          </p>
+          <p data-lang="footer-tag">Excellence in Education</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
